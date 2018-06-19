@@ -1,13 +1,7 @@
-if [ -f ~/.bashrc ]; then
-	source ~/.bashrc
-fi
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-# PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-# export PATH
+#!/usr/bin/env bash
 
 # Path to the bash it configuration
-export BASH_IT="~/.bash_it"
+export BASH_IT="{{BASH_IT}}"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -56,9 +50,3 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
